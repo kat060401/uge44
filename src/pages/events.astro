@@ -1,0 +1,186 @@
+---
+//@ts-nocheck
+
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1senlhbnRteHNxbndudnl0Ym91Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2MTAwMDEsImV4cCI6MjA5MjE4NjAwMX0.4oMNQybK4PWOr2cjGryFGCCp91oxjC7TSW1qGnPpwbo",
+  },
+};
+
+const url = "https://mlzyantmxsqnwnvytbou.supabase.co/rest/v1/tema9";
+
+const res = await fetch(url, options);
+const data = await res.json();
+---
+
+<Layout>
+  <section class="hero">
+    <h1>KALENDER</h1>
+    <p class="ordpodod">UGE 44</p>
+  </section>
+  <h2>EVENTS</h2>
+
+  <div class="grid">
+    {data.map((event) => <Card event={event} />)}
+  </div>
+</Layout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-family: "Bodoni 72", serif;
+    font-weight: 400;
+    font-size: 60px;
+  }
+
+  h2 {
+    font-family: "Bodoni 72", serif;
+    font-weight: 400;
+    justify-self: center;
+    margin-top: 2em;
+  }
+
+  p {
+    font-family: "Gilda Display", serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  /* GENERELT */
+  body {
+    overflow-x: hidden;
+    background-image: url("/image/cirekl.svg");
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    background-position: 120% 700px;
+  }
+
+  /* HERO – 3 cirkler + roser */
+  .hero {
+    position: relative;
+    text-align: center;
+    padding: 8rem 1rem;
+
+    /* GRADIENT + CIRKLER I ÉN SHORTHAND */
+    background: linear-gradient(to bottom, #ffc0ac 0%, #a28b82 100%), url("/image/cirekl.svg"), url("/image/cirkel1.svg"), url("/image/cirkel2.svg");
+
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+
+    background-size:
+      cover,
+      /* gradient */ 600px,
+      /* cirkel 1 */ 200px,
+      /* cirkel 2 / 400px; / cirkel 3 */
+
+    background-position:
+      center,
+      /* gradient */ 200px 700px,
+      calc(100% + 0px) -10px,
+      0% 100px;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-image: url("/image/cirkel3.svg");
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: 0% 800px;
+  }
+
+  /* HERO – roser */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 766px;
+    left: -250px;
+
+    transform: scaleX(-1);
+    width: 500px;
+    height: 420px;
+    background-image: url("/image/rose.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    right: -250px;
+    width: 620px;
+    height: 620px;
+    background-image: url("/image/rose.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  /* MAIN – 1 stor cirkel bag hele indholdet */
+  .section1,
+  .section2,
+  .section3 {
+    position: relative;
+    overflow: visible;
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    background-position: 120% 100px;
+  }
+
+  /* ROSER LÆNGERE NEDE */
+  .section1::after {
+    content: "";
+    position: absolute;
+    mask-image: url("/image/rose.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    opacity: 0.1;
+    width: 900px;
+    height: 900px;
+    top: -100px;
+    right: -300px;
+    transform: rotate(-15deg);
+    background-color: #f76237;
+    pointer-events: none;
+  }
+
+  .section3::before {
+    content: "";
+    position: absolute;
+    background-image: url("/image/rose.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    width: 900px;
+    height: 900px;
+    top: -250px;
+    left: -320px;
+    transform: scaleX(-1);
+    pointer-events: none;
+  }
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      padding: 1.5rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 1.5em;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+</style>
