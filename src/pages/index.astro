@@ -1,17 +1,347 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<!-- <meta charset="UTF-8" />
+<Header /> -->
+<Layout>
+  <section class="hero">
+    <h1>Det sværeste at tale om - og det vigtigste</h1>
+    <p class="ordpodod">UGE 44 SÆT ORD PÅ DØDEN</p>
+    <div class="btn-wrapper">
+      <a href="/events" class="btn">Mød os i uge 44</a>
+    </div>
+  </section>
+
+  <section class="section1">
+    <h2 class="taleom">Kan det være svært at tale om?</h2>
+
+    <div class="section">
+      <p>
+        Døden er noget, vi alle kommer tæt på i løbet af livet - men alligevel er det et emne, mange undgår at tale om. For nogle kan det føles tungt, ubehageligt eller svært at sætte ord på. Uge 44 er en landsdækkende kampagne fra Landsforeningen
+        Liv & Død, der netop sætter fokus på døden og forsøger at gøre samtalen mere åben og naturlig.
+      </p>
+      <p>
+        I løbet af ugen afholdes der arrangementer over hele landet - fra talks og workshops til filmvisninger og events – hvor man kan blive klogere, reflektere og dele tanker med andre. Formålet er ikke at gøre døden mindre alvorlig, men at gøre
+        det lettere at tale om den fordi samtalen kan skabe forståelse, tryghed og måske endda bringe os tættere på hinanden.
+      </p>
+    </div>
+  </section>
+
+  <section class="section2">
+    <h2 class="fokuspadoden">UGE 44 - Fokus på døden</h2>
+    <div class="del2">
+      <img src="/image/billede.png" alt="beskrivelse" />
+      <p class="p">
+        Hvert år sætter vi døden på dagsordenen i UGE 44 landet rundt. Med kampagnen ønsker vi at starte samtalerne og refleksionerne om dét, vi alle har til fælles, på tværs af kultur, sundhed og læring. Vil du være med til at sætte fokus på døden i
+        UGE 44? Vi arbejder løbende på at udvikle nye initiativer og indsatser til at involvere flere i temaugen. Hvis du gerne vil lave et arrangement, skabe et minderitual eller på anden måde sætte fokus på døden i UGE 44, så find mere info
+        herunder.
+      </p>
+    </div>
+  </section>
+
+  <section class="section3">
+    <h2 class="taleom">Hvorfor er det svært at tale om?</h2>
+    <div class="del3">
+      <p>
+        Det kan være svært at tale om døden, fordi det er et emne, mange ikke er vant til at snakke om. Døden kan virke lidt skræmmende eller ubehagelig, og derfor undgår vi det ofte. Vi ved ikke altid, hvad vi skal sige, eller hvordan vi skal
+        reagere - og det kan gøre det endnu sværere at tage hul på. Hvis man ikke selv har oplevet døden tæt på, kan det føles meget fjernt og svært at forstå. Man har måske ikke haft nogen i sit liv, man har mistet, og derfor kan det være svært at
+        sætte sig ind i de følelser, andre kan have. Det kan også gøre, at man bliver usikker på, om man siger noget forkert.
+      </p>
+      <p>
+        Samtidig er døden ikke noget, vi taler så meget om i hverdagen. Derfor mangler vi nogle gange ordene og modet til at snakke om det. Men når vi tør åbne op, kan det faktisk gøre det lidt mindre skræmmende - og hjælpe os med at forstå hinanden
+        bedre. Derfor har vi i uge 44 valgt at sætte fokus på netop dette. Vi har samlet forskellige events i en kalender, så du nemt kan finde noget, der kan hjælpe dig på rette vej – uanset om du er nysgerrig, usikker eller bare har brug for at
+        høre andres perspektiver.
+      </p>
+    </div>
+  </section>
+  <div class="btn-wrapper1">
+    <a href="/events" class="btn">Se events</a>
+  </div>
+</Layout>
+<!-- <Footer /> -->
+
+<style>
+  .hero {
+    background-image: url("/image/rose.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .hero h1 {
+    font-size: 5s0px;
+  }
+  p {
+    line-height: 1.6;
+    margin-left: 5em;
+    margin-right: 4em;
+  }
+  h2 {
+    margin-left: 3em;
+    text-transform: uppercase;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 5rem 1rem;
+  }
+
+  .btn {
+    background-color: #f99173;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 2em;
+  }
+
+  .section1 {
+    margin-top: 7em;
+  }
+
+  .del2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 5em;
+  }
+
+  .del3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .section2 {
+    margin-top: 9em;
+  }
+  .section3 {
+    margin-top: 9em;
+  }
+  .section2 h2 {
+    text-align: center;
+  }
+  .p {
+    background-color: rgba(255, 192, 172, 0.13);
+    padding: 2em;
+    width: 450px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  img {
+    border-radius: 1em;
+    margin: 0 auto;
+    width: 470px;
+    height: 420px;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+  }
+  .btn-wrapper1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 4em;
+  }
+  .ordpodod {
+    margin: 0;
+    padding-bottom: 6em;
+  }
+  h1 {
+    font-family: "Bodoni 72", serif;
+    font-weight: 400; /* book */
+  }
+
+  h2 {
+    font-family: "Bodoni 72", serif;
+    font-weight: 400; /* book */
+  }
+
+  p {
+    font-family: "Gilda Display", serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .taleom {
+    margin-left: 3.7em;
+  }
+
+  /* GENERELT */
+  body {
+    overflow-x: hidden;
+    background-image: url("/image/cirekl.svg");
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    background-position: 120% 700px;
+  }
+
+  /* HERO – 3 cirkler + roser */
+  .hero {
+    position: relative;
+    background-color: rgba(255, 192, 172, 0.15);
+    padding: 7rem 1rem;
+    text-align: center;
+
+    background-image:
+      url("/image/cirekl.svg"),
+      /* venstre */ url("/image/cirkel1.svg"),
+      /* højre / url("/image/cirkel2.svg"); / top */
+    background-repeat: no-repeat;
+
+    background-size:
+      500px,
+      /* venstre */ 100px,
+      /* højre / 100px; / top */
+
+    background-position:
+      800px 400px,
+      /* venstre */ calc(100% + 0px) -10px,
+      /* højre / 0% 100px; / top */
+  }
+  body {
+    overflow-x: hidden;
+    background-image: url("/image/cirkel3.svg");
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: 0% 1000px;
+  }
+
+  /* HERO – roser */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 200px;
+    left: -250px;
+
+    transform: scaleX(-1);
+    width: 500px;
+    height: 420px;
+    background-image: url("/image/rose.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    right: -160px;
+    width: 420px;
+    height: 420px;
+    background-image: url("/image/rose.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* MAIN – 1 stor cirkel bag hele indholdet */
+  .section1,
+  .section2,
+  .section3 {
+    position: relative;
+    overflow: visible;
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    background-position: 120% 100px;
+  }
+
+  /* ROSER LÆNGERE NEDE */
+  .section1::after {
+    content: "";
+    position: absolute;
+    mask-image: url("/image/rose.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    opacity: 0.1;
+    width: 900px;
+    height: 900px;
+    top: -100px;
+    right: -300px;
+    transform: rotate(-15deg);
+    background-color: #f76237;
+    pointer-events: none;
+  }
+
+  .section3::before {
+    content: "";
+    position: absolute;
+    background-image: url("/image/rose.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    width: 900px;
+    height: 900px;
+    top: -250px;
+    left: -320px;
+    transform: scaleX(-1);
+    pointer-events: none;
+  }
+
+  @media (max-width: 768px) {
+    /* Hele siden i én kolonne */
+    .section,
+    .del2,
+    .del3 {
+      grid-template-columns: 1fr;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* Tekster skal ikke have store margins på mobil */
+    p {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+
+    h2 {
+      margin-left: 1em;
+      text-align: left;
+    }
+
+    .taleom {
+      margin-left: 1em;
+    }
+
+    /* Billeder fylder hele bredden */
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* Boksen i sektion 2 */
+    .p {
+      width: 100%;
+      height: auto;
+      margin: 1em auto;
+    }
+
+    /* Hero-knap */
+    .btn-wrapper,
+    .btn-wrapper1 {
+      justify-content: center;
+    }
+
+    /* Sektion spacing */
+    .section1,
+    .section2,
+    .section3 {
+      margin-top: 4em;
+    }
+  }
+</style>
