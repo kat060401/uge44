@@ -1,0 +1,60 @@
+---
+const { pathname } = Astro.url;
+import Logo from "../../public/image/logo1.svg";
+---
+
+<header class="header">
+  <div class="container nav">
+    <a href="/" class="logo-wrapper">
+      <Logo class="logo" />
+    </a>
+
+    <nav class="right">
+      <a href="/events" class={pathname === "/events" ? "active kaldender" : "kaldender"}>Kalender</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: #a28b82;
+    padding: 2rem 0;
+  }
+
+  .nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo {
+    width: 90px;
+    height: auto;
+    display: block;
+  }
+
+  nav a {
+    color: white;
+    margin-right: 2em;
+    text-decoration: none;
+    background-color: #f99173;
+    padding: 0.5em;
+    border-radius: 2em;
+  }
+
+  .active {
+    border-bottom: 2px solid white;
+  }
+
+  .right {
+    margin-left: auto;
+  }
+</style>

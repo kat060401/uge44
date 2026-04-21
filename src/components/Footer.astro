@@ -1,0 +1,103 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>Landsforeningen Liv&Død</h3>
+      <p>
+        Bispebjerg Torv 16 St. TV<br />
+        2400 København NV
+      </p>
+
+      <p>
+        33 36 49 70<br />
+        info@livogdoed.dk
+      </p>
+
+      <p>CVR: 25441397</p>
+    </div>
+
+    <div class="footer-right">
+      <h3>Find os på de sociale medier</h3>
+
+      <div class="social-icons">
+        <img src="/image/socialemedier.png" alt="beskrivelse" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #88766f; /* brun baggrund */
+    padding: 4rem 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Rosen-streger i baggrunden */
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/image/rose-lines.png"); /* din stregtegning */
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .footer-left h3 {
+    margin-bottom: 1rem;
+    font-family: "Bodoni 72", serif;
+  }
+
+  .footer-left p {
+    margin: 0.5rem 0;
+    font-family: "Gilda Display", serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .footer-right h3 {
+    margin-bottom: 1rem;
+    font-family: "Bodoni 72", serif;
+  }
+
+  .social-icons img {
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  footer {
+    position: relative;
+    overflow: visible; /* så rosen må stikke ud */
+  }
+
+  /* Højre rose i footer */
+  footer::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    right: 250px;
+    width: 500px;
+    height: 500px;
+    background-image: url("/image/rose.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    pointer-events: none;
+    transform: scaleX(-1) rotate(-15deg);
+  }
+</style>
